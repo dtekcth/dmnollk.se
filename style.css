@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+}
+
+header {
+    height: 300px;
+    background-color: #F00;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+header > nav {
+    background-color: rgba(51, 51, 51, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+header > nav > a {
+    font-size: 130%;
+    padding: 10px 10px;
+    margin: 0 20px;
+    border-bottom: white 0px solid;
+    transition-property: border-bottom;
+    transition-duration: 0.1s;
+}
+
+header > nav > a.active-page, header > nav > a.active-page:hover {
+    border-bottom: #FA6607 3px solid;
+}
+
+header > nav > a:hover {
+    border-bottom: white 3px solid;
+}
+
+nav > a, nav > a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    background-color: #FEFDFC;
+}
+
+main > section {
+    padding: 40px calc((100% - 700px) / 2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section > h1 {
+    margin: 7px;
+    font-size: 300%;
+}
+
+section > h2 {
+    margin: 7px;
+}
+
+section > h3 {
+    margin: 7px;
+}
+
+section > h4 {
+    margin: 7px;
+    font-size: 120%;
+}
+
+section > p, section > ul {
+    margin: 8px;
+}
+
+section ul {
+    padding-left: 0;
+    text-align: justify;
+}
+
+section li {
+    list-style: none; 
+}
+
+section li::before {
+    content: ">";
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+footer > section {
+    padding: 40px;
+    text-align: center;
+}
+
+footer > section > p {
+    color: grey;
+    font-size: 85%;
+    text-align: left;
+}
+
+footer > section a {
+    color: grey;
+    text-decoration: none;
+}
+
+footer > section > h3, footer > section > h4 {
+    color: #FA6607;
+}
+
+footer > p {
+    color: grey;
+    font-size: 65%;
+    position: absolute;
+    bottom: 0px;  
+    left: 12px;
+}
+
+footer .feather {
+    color: grey;
+}
+
+footer #contact > a {
+    display: flex;
+    align-items: center;
+    font-size: 85%;
+    margin: 4px 0;
+}
+
+footer #contact > a > p {
+    margin: 0;
+}
+
+footer #contact svg {
+    margin-right: 6px;
+}
