@@ -53,6 +53,10 @@ main > section {
     align-items: center;
 }
 
+main > section > p > a {
+    display: inline-block
+}
+
 section > h1 {
     margin: 7px;
     font-size: 300%;
