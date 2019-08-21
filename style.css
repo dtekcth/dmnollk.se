@@ -5,40 +5,60 @@ body {
 }
 
 header {
-    height: 300px;
-    background-color: #F00;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 20px;
 }
 
-header > nav {
-    background-color: rgba(51, 51, 51, 0.8);
+#logo-and-nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-header > nav > a {
-    font-size: 130%;
+#logo-and-hamburger {
+    padding: 16px;
+}
+
+#header-logo {
+    width: 160px;
+}
+
+#header-nav {
+    align-self: center;
+    font-size: 120%;
+}
+
+#header-nav > a {
     padding: 10px 10px;
-    margin: 0 20px;
-    border-bottom: white 0px solid;
+    margin: 0 10px;
+    border-bottom: black 0px solid;
     transition-property: border-bottom;
     transition-duration: 0.1s;
 }
 
-header > nav > a.active-page, header > nav > a.active-page:hover {
+#header-nav > a.active-page, #header-nav > a.active-page:hover {
     border-bottom: #FA6607 3px solid;
 }
 
-header > nav > a:hover {
-    border-bottom: white 3px solid;
+#header-nav > a:hover {
+    border-bottom: black 3px solid;
+}
+
+#logo-and-hamburger > a {
+    display: none;
+}
+
+#banner-image {
+    height: 300px;
+    background-image: url("dmnollk.JPG");
+    background-size: cover;
+    background-position-y: 18%;
 }
 
 nav > a, nav > a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 main {
@@ -148,4 +168,93 @@ footer #contact > a > p {
 
 footer #contact svg {
     margin-right: 6px;
+}
+
+/* Smal */
+@media screen and (max-width: 1280px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Mobil / jättesmal */
+@media screen and (max-width: 960px) {
+    body {
+        font-size: 13px;
+    }
+
+    #logo-and-nav {
+        flex-direction: column;
+    }
+
+    #logo-and-hamburger {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+        border-radius: 2px;
+    }
+
+    #logo-and-hamburger > a {
+        align-self: center;
+        display: block;
+        font-size: 260%;
+        padding: 16px 24px;
+        text-decoration: none;
+        color: black;
+    }
+
+    #header-nav {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        max-height: 0px;
+        transition-property: max-height, padding;
+        transition-duration: 0.5s;
+        overflow: hidden;
+    }
+
+    #header-nav.expanded {
+        max-height: 280px;
+        padding: 16px 0;
+    }
+    
+    #header-nav > a {
+        padding: 10px 10px;
+        margin: 0 10px;
+        border: none;
+        color: black;
+        transition-property: color;
+        transition-duration: 0.1s;
+    }
+
+    #header-nav > a.active-page, #header-nav > a.active-page:hover {
+        border: none;
+        color: #FA6607;
+    }
+
+    #header-nav > a:hover {
+        border-bottom: none;
+        color: #FA6607;
+    }
+
+    #banner-image {
+        height: 240px;
+        background-size: 130%;
+        background-position-x: 44%;
+        background-position-y: 20%;
+        position: relative;
+        top: -1px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    footer > section {
+        padding: 10px 30px;
+        text-align: left;
+    }
 }
