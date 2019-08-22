@@ -127,7 +127,7 @@ footer {
 }
 
 footer > section {
-    padding: 40px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -142,8 +142,13 @@ footer > section a {
     text-decoration: none;
 }
 
-footer > section > h3, footer > section > h4 {
+footer > section > h3 {
     color: #FA6607;
+}
+
+footer > section > h4, footer > section > h5 {
+    color: #FA6607;
+    margin: 0px;
 }
 
 footer > p {
