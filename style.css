@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-size: 16px;
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;  
-    background-color: rgb(252, 249, 248);  
+    background-color:  rgb(247, 243, 240);  
 }
 
 header {
@@ -29,14 +29,35 @@ header {
 #header-nav {
     align-self: center;
     font-size: 120%;
+    display: flex;
+    align-items: baseline;
 }
 
-#header-nav.committees_submenu {
-    max-height: 100px;
+#committees-nav {
+    display: inline-block;    
+}
+
+#committees-nav #committees-submenu {
+    display: none;
+    max-height: 10000px;
+    width: 0;
     padding: 16px 0;
+    flex-direction: column;    
 }
 
-#header-nav > a {
+#committees-nav:hover #committees-submenu {
+    display: flex;
+}
+
+#committees-nav #committees-submenu a {
+    width: max-content;
+    padding: 14px;
+    padding-left: 0;
+    text-decoration: none;
+    border-bottom: #FEFDFC 3px solid;      
+}
+
+#header-nav > a, #header-nav > div > a, #header-nav > div > div > a {
     padding: 10px 10px;
     margin: 0 10px;
     border-bottom: black 0px solid;
@@ -44,11 +65,13 @@ header {
     transition-duration: 0.1s;
 }
 
-#header-nav > a.active-page, #header-nav > a.active-page:hover {
-    border-bottom: #FA6607 3px solid;
+#header-nav > a.active-page, #header-nav > a.active-page:hover,
+    #committees-nav a.active-page, #committees-nav a.active-page:hover,
+    #committees-nav #committees-submenu a.active-page, #committees-nav #committees-submenu a.active-page:hover {
+        border-bottom: #FA6607 3px solid;
 }
 
-#header-nav > a:hover {
+#header-nav > a:hover, #committees-nav a:hover, #committees-nav #committees-submenu a:hover  {
     border-bottom: black 3px solid;
 }
 
@@ -63,7 +86,7 @@ header {
     background-position-y: 18%;    
 }
 
-nav > a, nav > a:visited {
+nav > a, nav > a:visited, nav > a > div, nav > a > div > a, nav > div > a, nav > div > div > a {
     text-decoration: none;
     color: black;
 }
@@ -135,6 +158,10 @@ section > p {
     margin: 8px;
     padding: 14px;
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+
+section > p > a > p {
+    border-bottom: none;
 }
 
 section ul {
