@@ -1,14 +1,16 @@
 body {
     margin: 0;
     font-size: 16px;
-    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;  
+    background-color: rgb(252, 249, 248);  
 }
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #FEFDFC;
 }
 
 #logo-and-nav {
@@ -27,6 +29,11 @@ header {
 #header-nav {
     align-self: center;
     font-size: 120%;
+}
+
+#header-nav.committees_submenu {
+    max-height: 100px;
+    padding: 16px 0;
 }
 
 #header-nav > a {
@@ -53,16 +60,12 @@ header {
     height: 300px;
     background-image: url("dmnollk.jpg");
     background-size: cover;
-    background-position-y: 18%;
+    background-position-y: 18%;    
 }
 
 nav > a, nav > a:visited {
     text-decoration: none;
     color: black;
-}
-
-main {
-    background-color: #FEFDFC;
 }
 
 main > section {
@@ -73,25 +76,58 @@ main > section {
     align-items: center;   
 }
 
+.member {
+    max-width: 450px;
+    text-align: justify;
+}
+
+.member p {
+    margin: 0;
+}
+
+main > section:nth-child(even) .member img {
+    float: right;
+    margin-left: 10px;
+}
+
+main > section:nth-child(odd) .member img {
+    float: left;    
+    margin-right: 10px;
+}
+
+.member > img {
+    width: 160px; 
+}
+
 main > section > p > a {
-    display: inline-block
+    display: inline-block;
+    color: rgba(20, 70, 240, 0.85);
+    text-decoration: none;
+}
+
+main > section > p > a:hover {
+    text-decoration: underline;
 }
 
 section > h1 {
-    margin: 7px;
+    margin: 0;
+    margin-bottom: 16px;
     font-size: 300%;
 }
 
 section > h2 {
-    margin: 7px;
+    margin: 0;
+    margin-bottom: 14px;
 }
 
 section > h3 {
-    margin: 7px;
+    margin: 0;
+    margin-bottom: 13px;
 }
 
 section > h4 {
-    margin: 7px;
+    margin: 0;
+    margin-bottom: 12px;
     font-size: 120%;
 }
 

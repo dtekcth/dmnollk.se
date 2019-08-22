@@ -9,6 +9,16 @@ document.getElementById("hamburger").onclick = () => {
   }
 };
 
+document.getElementById("Committees").onmouseenter = () => {
+  let committees = document.getElementById("Committees");  
+  committees.classList.add("committees_submenu");  
+};
+
+document.getElementById("Committees").onmouseleave = () => {
+  let committees = document.getElementById("Committees");  
+  committees.classList.remove("committees_submenu");  
+};
+
 const e = React.createElement;
 
 
