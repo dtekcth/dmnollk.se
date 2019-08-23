@@ -44,8 +44,7 @@ header {
     background-color: #FEFDFC;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding-bottom: 10px;
+    z-index: 1;    
 }
 
 #committees-nav:hover #committees-submenu {
@@ -56,9 +55,10 @@ header {
     padding: 12px 16px;
     text-decoration: none;
     display: block;   
+    border-bottom: none;
 }
 
-#committees-nav #committees-submenu a:hover {
+#committees-nav #committees-submenu a:hover {    
     background-color: #ebebf1;
 }
 
@@ -66,7 +66,7 @@ header {
     background-color: #d7d7dd; 
 }
 
-#header-nav > a, #header-nav > div > a, #header-nav > div > div > a {
+#header-nav > a, #header-nav > div > a{
     padding: 10px 10px;
     margin: 0 10px;
     border-bottom: black 0px solid;
@@ -283,7 +283,6 @@ footer #contact svg {
         padding: 16px 24px;
         text-decoration: none;
         color: black;
-        width: 100%;
         text-align: left;
     }
 
@@ -298,7 +297,7 @@ footer #contact svg {
     }
 
     #header-nav.expanded {
-        max-height: 280px;
+        max-height: 480px;
         padding: 16px 0;
     }
 
@@ -352,6 +351,14 @@ footer #contact svg {
 
     footer > section {
         padding: 10px 30px;
-        text-align: left;
+        text-align: left;  
+    }
+
+    footer > section > p {
+        display: flex;
+        float: left;
+        margin-left: 0;        
+        margin-top: 0;
+        padding: 0;
     }
 }
