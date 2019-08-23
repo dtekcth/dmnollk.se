@@ -34,27 +34,36 @@ header {
 }
 
 #committees-nav {
-    display: inline-block;    
+    position: relative;
+    display: inline-block;  
 }
 
 #committees-nav #committees-submenu {
     display: none;
-    max-height: 10000px;
-    width: 0;
-    padding: 16px 0;
-    flex-direction: column;    
+    position: absolute;
+    background-color: #FEFDFC;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-bottom: 10px;
 }
 
 #committees-nav:hover #committees-submenu {
-    display: flex;
+    display: block;
 }
 
 #committees-nav #committees-submenu a {
-    width: max-content;
-    padding: 14px;
-    padding-left: 0;
+    padding: 12px 16px;
     text-decoration: none;
-    border-bottom: #FEFDFC 3px solid;      
+    display: block;   
+}
+
+#committees-nav #committees-submenu a:hover {
+    background-color: #ebebf1;
+}
+
+#committees-nav #committees-submenu a.active-page, #committees-nav #committees-submenu a.active-page:hover {
+    background-color: #d7d7dd; 
 }
 
 #header-nav > a, #header-nav > div > a, #header-nav > div > div > a {
@@ -65,13 +74,12 @@ header {
     transition-duration: 0.1s;
 }
 
-#header-nav > a.active-page, #header-nav > a.active-page:hover,
-    #committees-nav a.active-page, #committees-nav a.active-page:hover,
-    #committees-nav #committees-submenu a.active-page, #committees-nav #committees-submenu a.active-page:hover {
-        border-bottom: #FA6607 3px solid;
+#header-nav > a.active-page, #header-nav > a.active-page:hover, #header-nav #committees-nav > a.active-page,
+    #header-nav #committees-nav > a.active-page:hover {
+    border-bottom: #FA6607 3px solid;
 }
 
-#header-nav > a:hover, #committees-nav a:hover, #committees-nav #committees-submenu a:hover  {
+#header-nav > a:hover, #header-nav #committees-nav > a:hover {
     border-bottom: black 3px solid;
 }
 
@@ -265,7 +273,6 @@ footer #contact svg {
         margin: auto;
         display: flex;
         justify-content: space-between;
-        border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
         border-radius: 2px;
     }
 
@@ -276,6 +283,8 @@ footer #contact svg {
         padding: 16px 24px;
         text-decoration: none;
         color: black;
+        width: 100%;
+        text-align: left;
     }
 
     #header-nav {
@@ -292,6 +301,12 @@ footer #contact svg {
         max-height: 280px;
         padding: 16px 0;
     }
+
+    #header-nav.expanded a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
     
     #header-nav > a {
         padding: 10px 10px;
@@ -302,14 +317,23 @@ footer #contact svg {
         transition-duration: 0.1s;
     }
 
-    #header-nav > a.active-page, #header-nav > a.active-page:hover {
+    #header-nav > a.active-page, #header-nav > a.active-page:hover, #header-nav #committees-nav > a.active-page,
+      #header-nav #committees-nav > a.active-page:hover {
         border: none;
         color: #FA6607;
     }
 
-    #header-nav > a:hover {
+    #header-nav > a:hover, #header-nav #committees-nav > a:hover {
         border-bottom: none;
         color: #FA6607;
+    }
+
+    #committees-nav {
+        float: none;        
+    }
+    
+    #committees-nav #committees-submenu {
+        position: relative; 
     }
 
     #banner-image {
