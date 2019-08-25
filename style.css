@@ -5,10 +5,13 @@ body {
     background-color:  rgb(247, 243, 240);
 }
 
+a, a:visited {
+    text-decoration: none;
+}
+
 header {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     margin-bottom: 20px;
     background-color: #FEFDFC;
 }
@@ -22,6 +25,10 @@ header {
     padding: 16px;
 }
 
+#logo-and-hamburger > a {
+    display: none;
+}
+
 #header-logo {
     width: 160px;
 }
@@ -33,74 +40,26 @@ header {
     align-items: baseline;
 }
 
-#committees-nav {
-    position: relative;
-    display: inline-block;
-}
-
-#committees-submenu {
-    display: none;
-    position: absolute;
-    background-color: #FEFDFC;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-#committees-nav:hover #committees-submenu, #committees-nav:active #committees-submenu {
-    display: block;
-}
-
-#committees-submenu a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-bottom: none;
+#header-nav a, #header-nav a:visited {
     color: black;
 }
 
-#committees-submenu a:hover, #committees-submenu a:active {
-    background-color: #ebebf1;
-}
-
-#committees-submenu a.active-page,
-#committees-submenu a.active-page:hover,
-#committees-submenu a.active-page:active {
-    background-color: #d7d7dd;
-}
-
-#header-nav > a, #header-nav > div > a {
+#header-nav a, #committees-nav a {
     padding: 10px 10px;
     margin: 0 10px;
-    border-bottom: black 0px solid;
+    border-bottom: rgba(0,0,0,0) 3px solid;
     transition-property: border-bottom;
     transition-duration: 0.1s;
 }
 
 #header-nav > a.active-page, #header-nav > a.active-page:hover, #header-nav > a.active-page:active,
 #committees-nav > a.active-page, #committees-nav > a.active-page:hover, #committees-nav > a.active-page:active {
-    padding: 10px 10px;
-    margin: 0 10px;
     border-bottom: #FA6607 3px solid;
-    transition-property: border-bottom;
-    transition-duration: 0.1s;
 }
 
 #header-nav > a:hover, #header-nav > a:active,
 #committees-nav > a:hover, #committees-nav > a:active {
-    padding: 10px 10px;
-    margin: 0 10px;
     border-bottom: black 3px solid;
-    transition-property: border-bottom;
-    transition-duration: 0.1s;
-}
-
-#logo-and-hamburger > a {
-    display: none;
-}
-
-#plus {
-    display: none;
 }
 
 #banner-image {
@@ -110,13 +69,14 @@ header {
     background-position-y: 18%;
 }
 
-nav > a, nav > a:visited, nav > a > div, nav > a > div > a, nav > div > a, nav > div > div > a {
-    text-decoration: none;
-    color: black;
+main {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 main > section {
-    padding: 40px calc((100% - 700px) / 2);
+    padding: 16px;
+    margin-bottom: 40px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -146,13 +106,11 @@ main > section:nth-child(odd) .member img {
     width: 160px;
 }
 
-main > section > p > a {
-    display: inline-block;
+main a {
     color: rgba(20, 70, 240, 0.85);
-    text-decoration: none;
 }
 
-main > section > p > a:hover, main > section > p > a:active {
+main a:hover, main a:active {
     text-decoration: underline;
 }
 
@@ -178,16 +136,10 @@ section > h4 {
     font-size: 120%;
 }
 
-section > p {
+section > p, section > ul {
     margin: 8px;
     padding: 14px;
     border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
-}
-
-section > p > a > p {
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
 }
 
 section ul {
@@ -228,7 +180,6 @@ footer > section > p {
 
 footer > section a {
     color: grey;
-    text-decoration: none;
 }
 
 footer > section > h3 {
@@ -267,6 +218,42 @@ footer #contact svg {
     margin-right: 6px;
 }
 
+@media screen and (min-width: 1280px) {
+    #committees-nav {
+	position: relative;
+	display: inline-block;
+    }
+
+    #committees-submenu {
+	display: none;
+	position: absolute;
+	background-color: #FEFDFC;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+    }
+
+    #committees-nav:hover #committees-submenu, #committees-nav:active #committees-submenu {
+	display: block;
+    }
+
+    #committees-submenu a {
+	margin: 0 0;
+	padding: 12px 16px;
+	display: block;
+	border-bottom: none;
+    }
+
+    #committees-submenu a:hover, #committees-submenu a:active {
+	background-color: #ebebf1;
+    }
+
+    #committees-submenu a.active-page,
+    #committees-submenu a.active-page:hover,
+    #committees-submenu a.active-page:active {
+	background-color: #d7d7dd;
+    }
+}
+
 /* Smal */
 @media screen and (max-width: 1280px) {
     body {
@@ -292,17 +279,11 @@ footer #contact svg {
         border-radius: 2px;
     }
 
-    #plus {
-        display: block;
-        padding: 3px;
-    }
-
     #logo-and-hamburger > a {
         align-self: center;
         display: block;
         font-size: 260%;
         padding: 16px 24px;
-        text-decoration: none;
         color: black;
         text-align: left;
     }
@@ -322,53 +303,24 @@ footer #contact svg {
         padding: 16px 0;
     }
 
-    #header-nav.expanded a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    #header-nav > a {
-        padding: 10px 10px;
-        margin: 0 10px;
-        border: none;
+    #header-nav a {
+	display: block;
+	border: none;
         color: black;
         transition-property: color;
         transition-duration: 0.1s;
     }
 
-    #header-nav > a.active-page, #header-nav > a.active-page:hover, #committees-nav > a.active-page,
-    #committees-nav > a.active-page:hover,
-    #header-nav > a.active-page:active, #committees-nav > a.active-page:active,
-    #plus-committees-nav > a.active-page, #plus-committees-nav > a.active-page:hover,
-    #plus-committees-nav > a.active-page:active {
+    #header-nav a.active-page, #header-nav a.active-page:hover, #header-nav a.active-page:active,
+    #header-nav a:hover, #header-nav a:active {
         border: none;
         color: #FA6607;
     }
 
-    #header-nav > a:hover, #committees-nav > a:hover,
-    #header-nav > a:active, #committees-nav > a:active,
-    #plus-committees-nav > a:hover, #plus-committees-nav > a:active {
-        border-bottom: none;
-        color: #FA6607;
-    }
-
-    #committees-nav {
-        display: flex;
-        flex-direction: row;
-        float: none;
-    }
-
     #committees-submenu {
-        position: relative;
-    }
-
-    #committees-nav:hover #committees-submenu {
-        display: none;
-    }
-
-    #plus-committees-nav > a:hover #committees-submenu, #plus-committees-nav > a:active #committees-submenu {
-        display: block;
+    	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
     }
 
     #banner-image {
