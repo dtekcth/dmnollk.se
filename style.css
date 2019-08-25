@@ -33,12 +33,12 @@ header {
     align-items: baseline;
 }
 
-#header-nav #plus-committees-nav #committees-nav {
+#committees-nav {
     position: relative;
     display: inline-block;
 }
 
-#header-nav #plus-committees-nav #committees-nav #committees-submenu {
+#committees-submenu {
     display: none;
     position: absolute;
     background-color: #FEFDFC;
@@ -47,11 +47,11 @@ header {
     z-index: 1;
 }
 
-#header-nav #plus-committees-nav #committees-nav:hover #committees-submenu, #header-nav #plus-committees-nav #committees-nav:active #committees-submenu {
+#committees-nav:hover #committees-submenu, #committees-nav:active #committees-submenu {
     display: block;
 }
 
-#header-nav #plus-committees-nav #committees-nav #committees-submenu a {
+#committees-submenu a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -59,17 +59,17 @@ header {
     color: black;
 }
 
-#header-nav #plus-committees-nav #committees-nav #committees-submenu a:hover, #header-nav #plus-committees-nav #committees-nav #committees-submenu a:active {
+#committees-submenu a:hover, #committees-submenu a:active {
     background-color: #ebebf1;
 }
 
-#header-nav #plus-committees-nav #committees-nav #committees-submenu a.active-page,
-  #header-nav #plus-committees-nav #committees-nav #committees-submenu a.active-page:hover,
-  #header-nav #plus-committees-nav #committees-nav #committees-submenu a.active-page:active {
+#committees-submenu a.active-page,
+#committees-submenu a.active-page:hover,
+#committees-submenu a.active-page:active {
     background-color: #d7d7dd;
 }
 
-#header-nav > a, #header-nav > div > a{
+#header-nav > a, #header-nav > div > a {
     padding: 10px 10px;
     margin: 0 10px;
     border-bottom: black 0px solid;
@@ -77,9 +77,8 @@ header {
     transition-duration: 0.1s;
 }
 
-#header-nav > a.active-page, #header-nav > a.active-page:hover, #header-nav #plus-committees-nav #committees-nav > a.active-page,
-  #header-nav #plus-committees-nav #committees-nav > a.active-page:hover, #header-nav > a.active-page:active,
-  #header-nav #plus-committees-nav #committees-nav > a.active-page:active {
+#header-nav > a.active-page, #header-nav > a.active-page:hover, #header-nav > a.active-page:active,
+#committees-nav > a.active-page, #committees-nav > a.active-page:hover, #committees-nav > a.active-page:active {
     padding: 10px 10px;
     margin: 0 10px;
     border-bottom: #FA6607 3px solid;
@@ -87,8 +86,8 @@ header {
     transition-duration: 0.1s;
 }
 
-#header-nav > a:hover, #header-nav #plus-committees-nav #committees-nav > a:hover,
-  #header-nav > a:active, #header-nav #plus-committees-nav #committees-nav > a:active {
+#header-nav > a:hover, #header-nav > a:active,
+#committees-nav > a:hover, #committees-nav > a:active {
     padding: 10px 10px;
     margin: 0 10px;
     border-bottom: black 3px solid;
@@ -338,37 +337,37 @@ footer #contact svg {
         transition-duration: 0.1s;
     }
 
-    #header-nav > a.active-page, #header-nav > a.active-page:hover, #header-nav #plus-committees-nav #committees-nav > a.active-page,
-      #header-nav #plus-committees-nav #committees-nav > a.active-page:hover,
-      #header-nav > a.active-page:active, #header-nav #plus-committees-nav #committees-nav > a.active-page:active,
-      #header-nav #plus-committees-nav > a.active-page, #header-nav #plus-committees-nav > a.active-page:hover,
-      #header-nav #plus-committees-nav > a.active-page:active {
+    #header-nav > a.active-page, #header-nav > a.active-page:hover, #committees-nav > a.active-page,
+    #committees-nav > a.active-page:hover,
+    #header-nav > a.active-page:active, #committees-nav > a.active-page:active,
+    #plus-committees-nav > a.active-page, #plus-committees-nav > a.active-page:hover,
+    #plus-committees-nav > a.active-page:active {
         border: none;
         color: #FA6607;
     }
 
-    #header-nav > a:hover, #header-nav #plus-committees-nav #committees-nav > a:hover,
-      #header-nav > a:active, #header-nav #plus-committees-nav #committees-nav > a:active,
-      #header-nav #plus-committees-nav > a:hover, #header-nav #plus-committees-nav > a:active {
+    #header-nav > a:hover, #committees-nav > a:hover,
+    #header-nav > a:active, #committees-nav > a:active,
+    #plus-committees-nav > a:hover, #plus-committees-nav > a:active {
         border-bottom: none;
         color: #FA6607;
     }
 
-    #plus-committees-nav #committees-nav {
+    #committees-nav {
         display: flex;
         flex-direction: row;
         float: none;
     }
 
-    #plus-committees-nav #committees-nav #committees-submenu {
+    #committees-submenu {
         position: relative;
     }
 
-    #plus-committees-nav #committees-nav:hover #committees-submenu {
+    #committees-nav:hover #committees-submenu {
         display: none;
     }
 
-    #plus-committees-nav > a:hover #committees-nav #committees-submenu, #plus-committees-nav > a:active  #committees-nav #committees-submenu {
+    #plus-committees-nav > a:hover #committees-submenu, #plus-committees-nav > a:active #committees-submenu {
         display: block;
     }
 
