@@ -9,14 +9,9 @@ document.getElementById("hamburger").onclick = () => {
   }
 };
 
+
+
 const e = React.createElement;
-
-
-
-
-
-
-
 
 
 class LikeButton extends React.Component {
