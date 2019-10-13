@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 document.getElementById("hamburger").onclick = () => {
   let nav = document.getElementById("header-nav");
@@ -7,39 +7,12 @@ document.getElementById("hamburger").onclick = () => {
   } else {
     nav.classList.add("expanded");
   }
-};
+};*/
 
-
-
-const e = React.createElement;
-
-
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
-
-  render() {
-    if (this.state.liked) {
-      return 'You liked comment number ' + this.props.commentID;
-    }
-
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    );
-  }
-}
-
-// Find all DOM containers, and render Like buttons into them.
-document.querySelectorAll('.like_button_container')
-  .forEach(domContainer => {
-    // Read the comment ID from a data-* attribute.
-    const commentID = parseInt(domContainer.dataset.commentid, 10);
-    ReactDOM.render(
-      e(LikeButton, { commentID: commentID }),
-      domContainer
-    );
-  });
+fetch("footer.html")
+    .then(response => {
+	return response.text()
+    })
+    .then(data => {
+	document.querySelector("footer").innerHTML = data;
+    });
