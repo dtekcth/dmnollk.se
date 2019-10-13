@@ -64,7 +64,7 @@ header {
 
 #banner-image {
     height: 300px;
-    background-image: url("dmnollk.jpg");
+    background-image: url("dmnollk-pictures/dmnollk.jpg");
     background-size: cover;
     background-position-y: 18%;
 }
@@ -83,26 +83,26 @@ main > section {
     align-items: center;
 }
 
-.member {
+.member, .committee {
     max-width: 450px;
     text-align: justify;
 }
 
-.member p {
+.member p, .committee p {
     margin: 0;
 }
 
-main > section:nth-child(even) .member img {
+main > section:nth-child(even) .member img, main > section:nth-child(even) .committee img{
     float: right;
     margin-left: 10px;
 }
 
-main > section:nth-child(odd) .member img {
+main > section:nth-child(odd) .member img, main > section:nth-child(odd) .committee img{
     float: left;
     margin-right: 10px;
 }
 
-.member > img {
+.member > img, .committee > img {
     width: 160px;
 }
 
