@@ -1,4 +1,4 @@
-/*'use strict';
+'use strict';
 
 document.getElementById("hamburger").onclick = () => {
   let nav = document.getElementById("header-nav");
@@ -7,7 +7,7 @@ document.getElementById("hamburger").onclick = () => {
   } else {
     nav.classList.add("expanded");
   }
-};*/
+};
 
 fetch("footer.html")
     .then(response => {
