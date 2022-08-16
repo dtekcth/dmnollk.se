@@ -1,53 +1,36 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DMNollK - module</title>
+  <title>DMNollK - Module</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="dmnollk-pictures/logo.png">
+  <link rel="icon" href="image_logo.png">
 </head>
 
 <body>
   <header>
     <div id="logo-and-nav">
       <div id="logo-and-hamburger">
-        <img id="header-logo" src="dmnollk-pictures/logo.png" alt="DMNollK logo">
+        <img id="header-logo-small" src="image_logo.png" alt="DMNollK logo">
         <a id="hamburger" href="javascript:void(0)">☰</a>
       </div>
       <nav id="header-nav">
         <a href="index.html">Home</a>
-        <a href="module.html" class="active-page">Module</a>
         <a href="schedule.html">Schedule</a>
-        <a href="dmnollk.html">DMNollK</a>
-        <a href="cse_division.html">CSE division</a>
-        <div id="committees-nav">
-          <a href="committees.html">Committees</a>
-          <div id="committees-submenu">
-            <a href="division_committees.html">Division committees</a>
-            <a href="hobby_committees.html">Hobby committees</a>
-          </div>
-        </div>
-        <a href="studying.html">Studying at Chalmers</a>
+        <a href="events.html">Events</a>
+        <a href="module.html" class="active-page">Module</a>
+        <a href="studies.html">Study at Chalmers</a>
       </nav>
     </div>
-    <div id="banner-image"></div>
   </header>
   <main>
-    <section>
-      <h2>Module for the master reception 2019</h2>
-      <p>
-        It's is time for 2019's master reception for the CSE division! In this
-        <a href="Module2019.pdf">
-          PDF
-        </a>
-        you will find the module for the reception. It includes descriptions of all the
-        events during the master reception as well as lots of useful information about who the
-        student guidance counsellor is and a description of some of the different committees at
-        the CSE division.
-      </p>
-    </section>
+    <object data="Module.pdf" type="application/pdf"
+      style="border:transparent" width=90% height="855" frameborder="0" scrolling="yes">
+      <a href="Module.pdf"><h1>Module</h1></a> <!-- if module cant load in browser -->
+    </object>
   </main>
   <footer></footer>
   <script src="webpage.js"></script>
