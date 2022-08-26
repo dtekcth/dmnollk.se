@@ -9,7 +9,7 @@ Things that should be updated on the webpage each year:
 - make sure its the correct schedule, facebook, instagram, email, and all links in studies.html
 (keep the same names of ex images so you dont have to change the code)
 
-When something on the webpage is updated, make sure to contact dHack so that they can upload the new version of the webpage to the domain!
+When something on the webpage is updated, make sure to push and contact dHack so that they can upload the new version of the webpage to the domain!
 
 Remark: 
 start a local server to test webpage, ex:

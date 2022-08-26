@@ -67,6 +67,7 @@ header {
     background-image: url("image_header.png");
     background-size: cover;
     background-position-y: 18%;
+    background-position: center center;
 }
 
 main {
@@ -154,9 +155,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    padding: 15px;
-    padding-left: 45px;
-    padding-right:55px;
+    padding: 5%;
     text-align: left;
     color: grey;
 }
@@ -179,4 +178,56 @@ footer .feather {
     color: grey;
 }
 
-/* TODO for mobiles/small screens */
+/* Screens that are 750px or less */
+@media screen and (max-width: 750px) {
+
+    #logo-and-nav {
+        flex-direction: column;
+    }
+
+    #logo-and-hamburger {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 2px;
+    }
+
+    #logo-and-hamburger > a {
+        align-self: center;
+        display: block;
+        font-size: 260%;
+        padding: 16px 24px;
+        color: black;
+        text-align: left;
+    }
+
+    #header-nav {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        max-height: 0px;
+        transition-property: max-height, padding;
+        transition-duration: 0.5s;
+        overflow: hidden;
+    }
+
+    #header-nav.expanded {
+        max-height: 480px;
+        padding: 16px 0;
+    }
+
+    #header-nav a {
+    display: block;
+    border: none;
+        color: black;
+        transition-property: color;
+        transition-duration: 0.1s;
+    }
+
+    #header-nav a.active-page, #header-nav a.active-page:hover, #header-nav a.active-page:active,
+    #header-nav a:hover, #header-nav a:active {
+        border: none;
+        color: #FA6607;
+    }
+}
