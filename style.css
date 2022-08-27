@@ -66,7 +66,7 @@ header {
     height: 450px;
     background-image: url("image_header.png");
     background-size: cover;
-    background-position-y: 18%;
+    /*background-position-y: 18%;*/
     background-position: center center;
 }
 
@@ -229,5 +229,9 @@ footer .feather {
     #header-nav a:hover, #header-nav a:active {
         border: none;
         color: #FA6607;
+    }
+
+    #banner-image {
+        height: 150px;
     }
 }
