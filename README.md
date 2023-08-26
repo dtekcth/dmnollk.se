@@ -2,6 +2,7 @@
 
 Things that should be updated on the webpage each year:
 - Module.pdf
+- swedish_survival_kit
 - image_header.png
 - image_logo.png
 - events.html
